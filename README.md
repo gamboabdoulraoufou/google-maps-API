@@ -9,7 +9,7 @@ Directions API
 
 Retrieve duration and distance values based on the recommended route between start and end points.
 
-![Distance MAtrix](https://github.com/gamboabdoulraoufou/google-maps-API/blob/master/distance.png)
+![Distance MAtrix](https://github.com/gamboabdoulraoufou/google-maps-API/blob/master/distance_matrix.png)
 
 
 > Elevation API
