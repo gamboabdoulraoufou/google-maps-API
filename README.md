@@ -156,26 +156,38 @@ sudo apt-get install python-pip python-dev build-essential
 # Install googlemaps
 sudo pip install -U googlemaps
 
+sudo pip install pyopenssl ndg-httpsclient pyasn1
+
 ``` 
 
 > Example code
 
 ```py
+import googlemaps
+import json
+
+from datetime import datetime
+
 # Replace the API key below with a valid API key.
-gmaps = googlemaps.Client(key='YOUR_API_KEY')
+KEY = "YOUR_KEY"
+gmaps = googlemaps.Client(key=KEY)
 
 # Geocoding and address
 geocode_result = gmaps.geocode('1600 Amphitheatre Parkway, Mountain View, CA')
+print json.dumps(geocode_result, indent=2, sort_keys=True)
 
 # Look up an address with reverse geocoding
 reverse_geocode_result = gmaps.reverse_geocode((40.714224, -73.961452))
+print json.dumps(reverse_geocode_result, indent=2, sort_keys=True)
 
 # Request directions via public transit
 now = datetime.now()
-directions_result = gmaps.directions("Sydney Town Hall",
-                                     "Parramatta, NSW",
+directions_result = gmaps.directions("Rue Henri Farman 92130 Issy-les-Moulineaux",
+                                     "64 rue de la boétie paris",
                                      mode="transit",
                                      departure_time=now)
+
+print json.dumps(directions_result, indent=2, sort_keys=True)
                                      
                                      
 ``` 
