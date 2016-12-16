@@ -4,7 +4,7 @@ Use Python? Want to geocode something? Looking for directions? Maybe matrices of
 
 The Python Client for Google Maps Services is a Python Client library for the following Google Maps APIs:
 
-> Directions API
+> [Directions API](https://developers.google.com/maps/documentation/directions/)
 
 Help your users find their way.
 Return multi-part directions for a series of waypoints. Directions for several modes of transportation are available.
