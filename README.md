@@ -4,7 +4,6 @@ Use Python? Want to geocode something? Looking for directions? Maybe matrices of
 
 The Python Client for Google Maps Services is a Python Client library for the following Google Maps APIs:
 
-<br/>
 > [Directions API](https://developers.google.com/maps/documentation/directions/)
 
 Help your users find their way.
@@ -20,7 +19,7 @@ Retrieve duration and distance values based on the recommended route between sta
 ![Distance MAtrix](https://github.com/gamboabdoulraoufou/google-maps-API/blob/master/distance_matrix.png)
 <br/>
 
-> Elevation API
+> [Elevation API](https://developers.google.com/maps/documentation/elevation/)
 
 The Google Maps Elevation API provides elevation data for all locations on the surface of the earth, including depth locations on the ocean floor (which return negative values).
 
@@ -43,9 +42,10 @@ https://maps.googleapis.com/maps/api/elevation/json?locations=39.7391536,-104.98
    "status" : "OK"
 }
 
-``` 
+```  
+<br/> 
 
-> Geocoding API
+> [Geocoding API](https://developers.google.com/maps/documentation/geocoding/)
 
 Geocoding is the process of converting addresses (like a street address) into geographic coordinates (like latitude and longitude), which you can use to place markers on a map, or position the map.
 
@@ -79,9 +79,9 @@ https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Park
 }
 
 ```
+<br>
 
-
-> Time Zone AP
+> [Time Zone API](https://developers.google.com/maps/documentation/timezone/)
 
 The Google Maps Time Zone API provides time offset data for locations on the surface of the earth. You request the time zone information for a specific latitude/longitude pair and date. The API returns the name of that time zone, the time offset from UTC, and the daylight savings offset.
 
@@ -98,8 +98,9 @@ https://maps.googleapis.com/maps/api/timezone/json?location=38.908133,-77.047119
    "timeZoneName" : "Eastern Daylight Time"
 }
 ``` 
+<br/>
 
-> Roads API
+> [Roads API](https://developers.google.com/maps/documentation/roads/)
 
 The Google Maps Roads API allows you to map GPS coordinates to the geometry of the road, and to determine the speed limit along those road segments. The API is available via a simple HTTPS interface, and exposes the following services:
 
@@ -107,7 +108,9 @@ The Google Maps Roads API allows you to map GPS coordinates to the geometry of t
 - _Nearest roads_: This service returns individual road segments for a given set of GPS coordinates. This services takes up to 100 GPS points and returns the closest road segment for each point. The points passed do not need to be part of a continuous path.
 - _Speed limits_: This service returns the posted speed limit for a road segment. 
 
-> Places API
+<br/>
+
+> [Places API](https://developers.google.com/places/)
 
 - _Location Awareness_: 
 Use the power of mobile to give your users contextual information about where they are, when they’re there.
@@ -117,3 +120,4 @@ Search for and retrieve rich information about local businesses and points of in
 
 - _Autocomplete_:
 Add autocomplete to any application, providing type-ahead location-based predictions like the search on Google Maps.
+<br/>
