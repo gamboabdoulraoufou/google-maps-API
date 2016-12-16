@@ -151,10 +151,10 @@ Your API key should contains 40 caracteres and begin with AIza.
 
 ``` 
 # Install pip
-sudo apt-get install pip
+sudo apt-get install python-pip python-dev build-essential 
 
 # Install googlemaps
-pip install -U googlemaps
+sudo pip install -U googlemaps
 
 ``` 
 
