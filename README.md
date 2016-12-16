@@ -121,3 +121,63 @@ Search for and retrieve rich information about local businesses and points of in
 - _Autocomplete_:
 Add autocomplete to any application, providing type-ahead location-based predictions like the search on Google Maps.
 <br/>
+
+
+## Getting Started
+
+> Pre-requites
+
+- Clé d'API Google Maps ou ID client.
+- Java 1.6 or higher.
+- Python 2.7 or higher.
+
+> Get API key
+
+On [Google Developers Console](https://console.developers.google.com/?hl=fr) you have to generate an server API key for your project:
+- Go to Google Developers Console and connect to Google account.
+- Select a project or create new one.
+- Enable some of these items:
+   - Google Maps Directions API
+   - Google Maps Distance Matrix API
+   - Google Maps Elevation API
+   - Google Maps Geocoding API
+   - Google Maps Roads API
+   - Google Maps Time Zone API
+- Create new Key.
+
+Your API key should contains 40 caracteres and begin with AIza.
+
+> Install google Maps package
+
+``` 
+# Install pip
+sudo apt-get install pip
+
+# Install googlemaps
+pip install -U googlemaps
+
+``` 
+
+> Example code
+
+```py
+# Replace the API key below with a valid API key.
+gmaps = googlemaps.Client(key='YOUR_API_KEY')
+
+# Geocoding and address
+geocode_result = gmaps.geocode('1600 Amphitheatre Parkway, Mountain View, CA')
+
+# Look up an address with reverse geocoding
+reverse_geocode_result = gmaps.reverse_geocode((40.714224, -73.961452))
+
+# Request directions via public transit
+now = datetime.now()
+directions_result = gmaps.directions("Sydney Town Hall",
+                                     "Parramatta, NSW",
+                                     mode="transit",
+                                     departure_time=now)
+                                     
+                                     
+``` 
+
+Enjoy!
