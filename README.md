@@ -6,8 +6,66 @@ The Python Client for Google Maps Services is a Python Client library for the fo
 
 Directions API
 Distance Matrix API
-Elevation API
-Geocoding API
+> Elevation API
+
+The Google Maps Elevation API provides elevation data for all locations on the surface of the earth, including depth locations on the ocean floor (which return negative values).
+
+```sh 
+# Request
+https://maps.googleapis.com/maps/api/elevation/json?locations=39.7391536,-104.9847034&key=YOUR_API_KEY
+
+# Response
+{
+   "results" : [
+      {
+         "elevation" : 1608.637939453125,
+         "location" : {
+            "lat" : 39.73915360,
+            "lng" : -104.98470340
+         },
+         "resolution" : 4.771975994110107
+      }
+   ],
+   "status" : "OK"
+}
+
+``` 
+
+> Geocoding API
+
+Geocoding is the process of converting addresses (like a street address) into geographic coordinates (like latitude and longitude), which you can use to place markers on a map, or position the map.
+
+Reverse geocoding is the process of converting geographic coordinates into a human-readable address. The Google Maps Geocoding API's reverse geocoding service also lets you find the address for a given place ID.
+
+```sh  
+# Request
+https://maps.googleapis.com/maps/api/geocode/json?address=1600+Amphitheatre+Parkway,+Mountain+View,+CA&key=YOUR_API_KEY
+
+# Response
+{
+   "results" : [
+      {
+         "address_components" : [
+           ...
+         ],
+         "formatted_address" : "1600 Amphitheatre Parkway, Mountain View, CA 94043, USA",
+         "geometry" : {
+            "location" : {
+               "lat" : 37.4224764,
+               "lng" : -122.0842499
+            },
+            "location_type" : "ROOFTOP",
+            ...
+         },
+         "place_id" : "ChIJ2eUgeAK6j4ARbn5u_wAGqWA",
+         "types" : [ "street_address" ]
+      }
+   ],
+   "status" : "OK"
+}
+
+```
+
 
 > Time Zone AP
 
@@ -31,8 +89,17 @@ https://maps.googleapis.com/maps/api/timezone/json?location=38.908133,-77.047119
 
 The Google Maps Roads API allows you to map GPS coordinates to the geometry of the road, and to determine the speed limit along those road segments. The API is available via a simple HTTPS interface, and exposes the following services:
 
-- Snap to roads This service returns the best-fit road geometry for a given set of GPS coordinates. This service takes up to 100 GPS points collected along a route, and returns a similar set of data with the points snapped to the most likely roads the vehicle was traveling along. Optionally, you can request that the points be interpolated, resulting in a path that smoothly follows the geometry of the road.
-- Nearest roads This service returns individual road segments for a given set of GPS coordinates. This services takes up to 100 GPS points and returns the closest road segment for each point. The points passed do not need to be part of a continuous path.
-- Speed limits This service returns the posted speed limit for a road segment. The Speed Limit service is only available to Google Maps APIs Premium Plan customers. If you are an existing customer, you can contact your account manager or file a ticket in the Premium Plan support portal to enable the Google Maps Roads API.
+- _Snap to roads_: This service returns the best-fit road geometry for a given set of GPS coordinates. This service takes up to 100 GPS points collected along a route, and returns a similar set of data with the points snapped to the most likely roads the vehicle was traveling along.  
+- _Nearest roads_: This service returns individual road segments for a given set of GPS coordinates. This services takes up to 100 GPS points and returns the closest road segment for each point. The points passed do not need to be part of a continuous path.
+- _Speed limits_: This service returns the posted speed limit for a road segment. 
 
-Places API
+> Places API
+
+- _Location Awareness_: 
+Use the power of mobile to give your users contextual information about where they are, when they’re there.
+
+- _Search Everywhere_:
+Search for and retrieve rich information about local businesses and points of interest, available on every screen.
+
+- _Autocomplete_:
+Add autocomplete to any application, providing type-ahead location-based predictions like the search on Google Maps.
