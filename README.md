@@ -1,9 +1,10 @@
 # Python Client for Google Maps Services
 
-Use Python? Want to geocode something? Looking for directions? Maybe matrices of directions? This library brings the Google Maps API Web Services to your Python application. <br/>
+Use Python? Want to geocode something? Looking for directions? Maybe matrices of directions? This library brings the Google Maps API Web Services to your Python application. 
 
 The Python Client for Google Maps Services is a Python Client library for the following Google Maps APIs:
 
+<br/>
 > [Directions API](https://developers.google.com/maps/documentation/directions/)
 
 Help your users find their way.
@@ -12,12 +13,12 @@ Return multi-part directions for a series of waypoints. Directions for several m
 ![Direction API](https://github.com/gamboabdoulraoufou/google-maps-API/blob/master/direction.png)
 <br/>
 
-> Distance Matrix API
+> [Distance Matrix API](https://developers.google.com/maps/documentation/distancematrix/)
 
 Retrieve duration and distance values based on the recommended route between start and end points.
 
 ![Distance MAtrix](https://github.com/gamboabdoulraoufou/google-maps-API/blob/master/distance_matrix.png)
-
+<br/>
 
 > Elevation API
 
