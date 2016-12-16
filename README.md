@@ -5,7 +5,13 @@ Use Python? Want to geocode something? Looking for directions? Maybe matrices of
 The Python Client for Google Maps Services is a Python Client library for the following Google Maps APIs:
 
 Directions API
-Distance Matrix API
+> Distance Matrix API
+
+Retrieve duration and distance values based on the recommended route between start and end points.
+
+![Distance MAtrix](https://github.com/gamboabdoulraoufou/google-maps-API/blob/master/distance.png)
+
+
 > Elevation API
 
 The Google Maps Elevation API provides elevation data for all locations on the surface of the earth, including depth locations on the ocean floor (which return negative values).
